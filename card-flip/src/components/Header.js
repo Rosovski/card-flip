@@ -1,11 +1,15 @@
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { setCardsNumber } from "../actions/number";
 
-const Header = ({ onChange }) => {
+const Header = () => {
   const [number, setNumber] = useState(0);
+
+  const dispatch = useDispatch();
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    onChange(number);
+    dispatch(setCardsNumber(number));
   };
 
   return (
