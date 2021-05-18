@@ -20,6 +20,8 @@ const CardBoard = () => {
   console.log(cardsCollection);
   useEffect(() => {
     if (cardsNumber > 0) {
+      setPairs([]);
+
       const initArr = falseArrayFormation();
       dispatch(setCardsIsFlipped(initArr));
       dispatch(setCardsIsDisabled(initArr));

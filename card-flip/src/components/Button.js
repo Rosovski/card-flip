@@ -13,7 +13,7 @@ const Button = () => {
   return (
     <>
       <button className="shuffle-button" onClick={onClick}>
-        Shuffle
+        Reset
       </button>
     </>
   );
